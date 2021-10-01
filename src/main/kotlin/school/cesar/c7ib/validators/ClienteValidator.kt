@@ -12,7 +12,7 @@ class ClienteValidator {
         validaFormatoCampos(cliente)
     }
 
-    fun validaCamposObrigatorios(cliente: Cliente) {
+    private fun validaCamposObrigatorios(cliente: Cliente) {
         if (cliente.nome.isBlank()) {
             throw ClienteInvalidoException("O nome deve ser preenchido")
         }
@@ -22,7 +22,7 @@ class ClienteValidator {
         }
     }
 
-    fun validaTamanhoCampos(cliente: Cliente) {
+    private fun validaTamanhoCampos(cliente: Cliente) {
         if (cliente.nome.length > 200) {
             throw ClienteInvalidoException("O campo nome deve ter menos de 200 caracteres")
         }
@@ -32,7 +32,7 @@ class ClienteValidator {
         }
     }
 
-    fun validaFormatoCampos(cliente: Cliente) {
+    private fun validaFormatoCampos(cliente: Cliente) {
         if (!CPFUtil.isCPF(cliente.cpf)) {
             throw ClienteInvalidoException("O cpf é invalido")
         }

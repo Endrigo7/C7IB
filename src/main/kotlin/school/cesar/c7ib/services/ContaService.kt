@@ -39,6 +39,8 @@ class ContaService {
 
     fun criar(conta: ContaDTO) {
         contaValidator.validaAbertura(conta)
+        
+
     }
 
     fun buscar(agencia: Agencia, numero: String) =

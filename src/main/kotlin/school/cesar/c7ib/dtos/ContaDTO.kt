@@ -6,5 +6,5 @@ data class ContaDTO(
     val cpf: String,
     val valorInicial: BigDecimal,
     val senha: String,
-    val cofirmacaoSenha: String
+    val confirmacaoSenha: String
 )
