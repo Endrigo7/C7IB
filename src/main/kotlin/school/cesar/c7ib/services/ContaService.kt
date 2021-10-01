@@ -30,7 +30,7 @@ class ContaService {
 
     private fun formatoDataNumeroConta(): String {
         val now = DataUtil.dataHoraAtual()
-        return "${now.year}${now.month}${now.dayOfYear}${now.hour}${now.minute}${now.second}${now.nano}"
+        return "${now.year}${now.month}${now.dayOfMonth}${now.hour}${now.minute}${now.second}${now.nano}"
     }
 
     private fun add(conta: Conta) {

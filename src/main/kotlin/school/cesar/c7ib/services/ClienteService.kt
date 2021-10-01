@@ -9,7 +9,7 @@ class ClienteService {
     private val clienteValidator = ClienteValidator()
 
     fun add(cliente: Cliente) {
-        clienteValidator.validate(cliente)
+        clienteValidator.valida(cliente)
         ClienteRepository.add(cliente)
     }
 
