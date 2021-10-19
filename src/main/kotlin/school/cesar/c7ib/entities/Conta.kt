@@ -9,17 +9,17 @@ data class Conta(
     val tipoConta: TipoConta,
     val senha: String,
     val saldo: BigDecimal
-){
+) {
     fun creditar(valor: BigDecimal) {
         saldo.add(valor)
     }
 
-    fun debitar(valor: BigDecimal){
+    fun debitar(valor: BigDecimal) {
         saldo.subtract(valor)
     }
 
-    fun transferir(valor: BigDecimal, destino: Conta){
-        saldo.subtract(valor)
-        destino.saldo.add(valor)
+    fun transferir(valor: BigDecimal, destino: Conta) {
+        debitar(valor)
+        destino.creditar(valor)
     }
 }

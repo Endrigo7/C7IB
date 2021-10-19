@@ -1,9 +1,9 @@
 package school.cesar.c7ib.entities
 
-import java.time.LocalDateTime
+import java.time.LocalDate
 
 data class Cliente(
     val cpf: String,
     val nome: String,
-    val dataNascimento: LocalDateTime
+    val dataNascimento: LocalDate
 )
