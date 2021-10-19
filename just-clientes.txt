@@ -1,2 +1,2 @@
-{"cliente": {"cpf": "32464074012", "nome": "Joao", "data-nascimento":"1980-10-09"}}
-{"cliente": {"cpf": "05545079009", "nome": "Jair", "data-nascimento":"1981-07-15"}}
+{"cliente": {"cpf": "324.640.740-12", "nome": "Joao", "data-nascimento":"1980-10-09"}}
+{"cliente": {"cpf": "055.450.790-09", "nome": "Jair", "data-nascimento":"1981-07-15"}}

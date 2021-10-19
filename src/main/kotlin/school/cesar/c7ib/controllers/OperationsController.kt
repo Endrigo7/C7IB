@@ -13,6 +13,8 @@ object OperationsController {
     fun init() {
         val operationsJson = readOperations()
         val operations = buildOperationsRequestList(operationsJson)
+        println(operations)
+
         handleOperations(operations)
     }
 
