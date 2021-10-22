@@ -1,10 +1,10 @@
 package school.cesar.c7ib.adapters
 
-import school.cesar.c7ib.entities.OperationRequest
+import school.cesar.c7ib.dtos.OperationDTO
 import school.cesar.c7ib.util.ObjectMapperBuilder
 
 object OperationRequestAdapter {
 
-    fun toOperationRequest(operationJson: String): OperationRequest =
-        ObjectMapperBuilder.build().readValue(operationJson, OperationRequest::class.java)
+    fun toOperationRequest(operationJson: String): OperationDTO =
+        ObjectMapperBuilder.build().readValue(operationJson, OperationDTO::class.java)
 }

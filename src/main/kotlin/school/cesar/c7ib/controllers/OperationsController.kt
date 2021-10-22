@@ -1,7 +1,7 @@
 package school.cesar.c7ib.controllers
 
 import school.cesar.c7ib.adapters.OperationRequestAdapter.toOperationRequest
-import school.cesar.c7ib.entities.OperationRequest
+import school.cesar.c7ib.dtos.OperationDTO
 import school.cesar.c7ib.services.ClienteService
 import school.cesar.c7ib.services.ContaService
 
@@ -12,8 +12,10 @@ object OperationsController {
 
     fun init() {
         val operationsJson = readOperations()
+        println("lista de string: $operationsJson")
+
         val operations = buildOperationsRequestList(operationsJson)
-        println(operations)
+        println("lista de operationRequest: $operations")
 
         handleOperations(operations)
     }
@@ -24,16 +26,16 @@ object OperationsController {
     private fun buildOperationsRequestList(operationsJson: List<String>) =
         operationsJson.map { toOperationRequest(it) }
 
-    private fun handleOperations(listOperationsRequest: List<OperationRequest>) {
+    private fun handleOperations(listOperationsRequest: List<OperationDTO>) {
         listOperationsRequest.forEach { operationRequest ->
 
-            val operationResponse =
-                operationRequest.cliente?.let {
-                    clienteService.add(it)
-                } ?: operationRequest.agencia?.let {
+            val operationRequest =
+                operationRequest.cliente?.apply {
+                    clienteService.add(this)
+                } ?: operationRequest.agencia?.apply {
 
-                } ?: operationRequest.contaDTO?.let {
-                    contaService.criar(it)
+                } ?: operationRequest.contaDTO?.apply {
+                    contaService.criar(this)
                 }
 
             //operationResponse?.apply { writeOut(this) }
