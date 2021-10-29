@@ -12,11 +12,8 @@ object OperationsController {
 
     fun init() {
         val operationsJson = readOperations()
-        println("lista de string: $operationsJson")
-
         val operations = buildOperationsRequestList(operationsJson)
-        println("lista de operationRequest: $operations")
-
+        
         handleOperations(operations)
     }
 
