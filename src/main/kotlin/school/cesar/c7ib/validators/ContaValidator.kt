@@ -1,10 +1,10 @@
 package school.cesar.c7ib.validators
 
-import com.school.cesar.cib.util.CPFUtil
 import com.school.cesar.cib.util.SenhaUtil
 import school.cesar.c7ib.dtos.ContaDTO
 import school.cesar.c7ib.exceptions.ContaInvalidaException
 import school.cesar.c7ib.respositories.ClienteRepository
+import school.cesar.c7ib.util.CPFUtil
 import java.math.BigDecimal
 
 class ContaValidator {

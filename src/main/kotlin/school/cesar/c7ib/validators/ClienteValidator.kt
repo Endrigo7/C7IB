@@ -1,8 +1,9 @@
 package school.cesar.c7ib.validators
 
-import com.school.cesar.cib.util.CPFUtil
+
 import school.cesar.c7ib.entities.Cliente
 import school.cesar.c7ib.exceptions.ClienteInvalidoException
+import school.cesar.c7ib.util.CPFUtil
 
 class ClienteValidator {
 

@@ -1,4 +1,4 @@
-package com.school.cesar.cib.util
+package school.cesar.c7ib.util
 
 object CPFUtil {
 
